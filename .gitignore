@@ -14,3 +14,4 @@
 /composer.lock
 /.idea/
 /public/js/vendor/
+/public/css/vendor/

@@ -6,6 +6,8 @@ window.onload = function() {
         }
     });
     document.getElementById("numbers").style.display = "block";
+
+    ds.getProblem();
 };
 
 var store = {
@@ -14,7 +16,8 @@ var store = {
         target: '',
         numbers: ['','','','','',''],
         result:'',
-        proof:''
+        proof:'',
+        working:false
     },
     setNumbers (aNumbers) {
         this.state.numbers = aNumbers
@@ -33,6 +36,9 @@ var store = {
     },
     getTarget() {
         return this.state.target;
+    },
+    setWorking (bWorking) {
+        this.state.working = bWorking;
     }
 };
 
@@ -69,14 +75,20 @@ class Ds {
     }
 
     getProblem() {
+        let me = this;
         this.apiCall('generateProblem',{},function(oResult) {
             store.setNumbers(oResult.numbers);
             store.setTarget(oResult.target);
+            me.solveProblem();
         })
     }
 
     solveProblem() {
+        // start spinner
+        store.setWorking(true);
         this.apiCall('solveProblem/' + store.getTarget() + '/' + store.getNumbers().join(","),{},function(oResult) {
+            // stop spinner
+            store.setWorking(false);
             store.setResult(oResult.result);
             store.setProof(oResult.proof);
         })

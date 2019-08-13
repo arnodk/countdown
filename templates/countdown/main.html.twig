@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="javascript://" onclick="ds.getProblem()">get problem</a> |
+    <a href="javascript://" onclick="ds.solveProblem()">solve problem</a>
+    <div id="numbers" class="v">
+        <div id="targetNumber">{{"{{ sharedState.target }}"}}</div>
+        <ul id="numbers-ul">
+            <li v-for="number in sharedState.numbers">
+                {{"{{ number }}"}}
+            </li>
+        </ul>
+        <div id="resultNumber">{{"{{ sharedState.result }}"}}</div>
+        <div id="resultProof">{{"{{ sharedState.proof }}"}}</div>
+    </div>
+
+{% endblock %}

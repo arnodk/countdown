@@ -58,7 +58,7 @@ class Solution
                     }
                 } while (!$this->operation->valid());
             }
-        } elseif ($mutationType==2) {
+        } elseif ($mutationType === 2) {
             // change operation type:
             do {
                 $this->operation->setOperationType(rand(1,4));

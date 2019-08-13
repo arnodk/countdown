@@ -1,3 +1,65 @@
+body {
+    background-color:#50A4FC;
+}
+
 .v {
     display: none;
+}
+
+#numbers {
+    margin:auto;
+    width:80%;
+}
+
+#numbers ul {
+    list-style: none;
+    height:57px;
+    border-width: 0;
+    border-color:dodgerblue;
+    border-style:solid;
+    background-color:dodgerblue;
+    width:600px;
+    margin-left:calc(50% - 300px);
+    padding:0;
+}
+
+#numbers ul li {
+    padding:0;
+    float:left;
+    height:55px;
+    font-size:48px;
+    width:96px;
+    color:white;
+    font-family: "Arial";
+    border-width:2px;
+    border-style:solid;
+    border-color:blue;
+    border-width: 2px;
+    text-align: center;
+}
+
+#targetNumber {
+    font-family: "Arial";
+    font-size:80px;
+    letter-spacing: 10px;
+    color:white;
+    font-weight:bold;
+    border-width: 2px;
+    border-color:dodgerblue;
+    border-style:solid;
+    background-color:blue;
+    width:250px;
+    text-align: center;
+    height:95px;
+    margin-left:calc(50% - 125px);
+}
+
+#proof {
+    background-color:#efefef;
+    min-height:400px;
+    font-family: "Lucida Console";
+    font-size:40px;
+    font-weight:normal;
+    padding:20px;
+    line-height: 1.2em;
 }

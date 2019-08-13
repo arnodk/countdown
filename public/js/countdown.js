@@ -11,9 +11,9 @@ window.onload = function() {
 var store = {
     debug: true,
     state: {
-        target: 0,
-        numbers: [],
-        result:0,
+        target: '',
+        numbers: ['','','','','',''],
+        result:'',
         proof:''
     },
     setNumbers (aNumbers) {

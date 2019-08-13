@@ -10,8 +10,9 @@
                 {{"{{ number }}"}}
             </li>
         </ul>
-        <div id="resultNumber">{{"{{ sharedState.result }}"}}</div>
-        <div id="resultProof">{{"{{ sharedState.proof }}"}}</div>
+        <div id="proof">
+            <div id="resultProof">{{"{{ sharedState.proof }}"}}</div>
+            <div id="resultNumber"> = {{"{{ sharedState.result }}"}}</div>
+        </div>
     </div>
-
 {% endblock %}

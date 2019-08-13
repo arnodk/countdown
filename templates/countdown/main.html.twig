@@ -14,8 +14,8 @@
             </li>
         </ul>
         <div id="proof">
-            <div id="resultProof">{{"{{ sharedState.proof }}"}}</div>
-            <div id="resultNumber" v-if="sharedState.result"> = {{"{{ sharedState.result }}"}}</div>
+            <div id="resultProof" v-if="sharedState.proof">{{"{{ sharedState.proof }}"}}  = {{"{{ sharedState.result }}"}}</div>
+            <div id="resultNumber" v-if="sharedState.result">Distance = {{"{{ sharedState.score }}"}}</div>
         </div>
     </div>
 {% endblock %}

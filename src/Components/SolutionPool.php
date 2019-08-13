@@ -11,8 +11,8 @@ namespace App\Components;
 
 class SolutionPool
 {
-    const iPoolSize = 120;
-    const iCull     = 40;
+    const iPoolSize = 1000;
+    const iCull     = 200;
 
     private $problem = NULL;
     private $aSolutions = [];

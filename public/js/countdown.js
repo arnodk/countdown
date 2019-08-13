@@ -17,6 +17,7 @@ var store = {
         numbers: ['','','','','',''],
         result:'',
         proof:'',
+        score:0,
         working:false
     },
     setNumbers (aNumbers) {
@@ -39,6 +40,9 @@ var store = {
     },
     setWorking (bWorking) {
         this.state.working = bWorking;
+    },
+    setScore(iScore) {
+        this.state.score = parseInt(iScore);
     }
 };
 
@@ -91,6 +95,7 @@ class Ds {
             store.setWorking(false);
             store.setResult(oResult.result);
             store.setProof(oResult.proof);
+            store.setScore(oResult.score);
         })
     }
 }

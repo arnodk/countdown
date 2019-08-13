@@ -64,11 +64,13 @@ class Countdown
         echo "Final result: " . $solutionBest->calc() . "<br>";
         echo "Final calculation: " . $solutionBest->display();
         */
-
+        $iResult = intval($solutionBest->calc());
         return [
             "target"=>$this->problem->getTarget(),
-            "result"=>$solutionBest->calc(),
-            "proof"=>$solutionBest->display()
+            "result"=>$iResult,
+            "score"=>$this->problem->distanceToTarget($iResult),
+            "proof"=>$solutionBest->display(),
+
         ];
     }
 }
